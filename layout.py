@@ -153,6 +153,7 @@ class TemplateLayout:
                 ])
             ], style={"padding-top": "10px", "padding-bottom": "10px"})
 
+    @property
     def create_main_menu_page(self):
         return dbc.Container([
             # Background GIF layer
@@ -198,8 +199,13 @@ class TemplateLayout:
             html.Br(),
             dbc.Button("Go to Plots", href="/plots", color="primary"),
 
-            dbc.Button("Transpose", id="transpose-btn", color="secondary", className="me-3"),
-        ], fluid=True, style={"padding-bottom": "40px", "padding-left": "10px"})
+            dbc.Button(
+                [html.Img(src="https://preview.redd.it/how-it-feels-pressing-refresh-server-list-for-the-500th-v0-31rikka4hyfh1.jpeg?auto=webp&s=bba6c9e463807e1f9271447b8bea0fbf3359187f", style={"height": "20px", "marginRight": "6px"}),
+                 "Transpose"],
+                id="transpose-btn",
+                color="secondary",
+                className="me-3",
+            ),])
 
     def create_plots_page(self):
         return dbc.Container([

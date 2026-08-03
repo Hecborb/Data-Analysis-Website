@@ -71,7 +71,7 @@ def display_page(pathname):
     if pathname == "/":
         return layout_manager.create_home_page()
     elif pathname == "/main-menu":
-        return layout_manager.create_main_menu_page()
+        return layout_manager.create_main_menu_page
     elif pathname == "/plots":
         return layout_manager.create_plots_page()
     elif pathname == "/export":
