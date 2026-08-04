@@ -1,0 +1,19 @@
+/* Color-invert toggle, driven by the "invert-toggle-btn" navbar button
+   via a clientside callback in app.py that toggles the "inverted" class
+   on <html>. */
+
+html {
+  transition: filter 0.25s ease;
+}
+
+html.inverted {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Double-invert photos, charts, and embedded frames so they read
+   normally instead of coming out as color negatives. */
+html.inverted img,
+html.inverted video,
+html.inverted iframe {
+  filter: invert(1) hue-rotate(180deg);
+}
