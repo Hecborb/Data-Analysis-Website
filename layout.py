@@ -242,6 +242,7 @@ class TemplateLayout:
                     dbc.Label("Plot type"),
                     dcc.Dropdown(id="plot-kind", options=[
                         {"label": "Scatter", "value": "scatter"},
+                        {"label": "Line", "value": "line"},
                         {"label": "Histogram", "value": "hist"},
                         {"label": "Box", "value": "box"},
                     ], value="scatter"),
